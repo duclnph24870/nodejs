@@ -22,16 +22,27 @@ function MenuItem ({ data }) {
                 <Button IconLeft={data.iconLeft && data.iconLeft} IconRight={data.iconRight && data.iconRight} className={cx('item')}>{data.text}</Button>
             </NavLink>
 
-            {data.children && active && 
-                data.children.map((item,index) => {
-                    return <NavLink 
-                        to={item.to} 
-                        className={(nav) => cx('menuItem',{active: nav.isActive,child: active})}
-                        key={index}
-                    >
-                        <Button className={cx('item')}>{item.text}</Button>
-                    </NavLink>
-                })
+            {data.children && 
+                <div 
+                    className={cx('itemChild', {
+                        active: active,
+                    })}
+                    style= {{
+                        '--column': data.children.length,
+                    }}
+                >
+                    {
+                        data.children.map((item,index) => {
+                            return <NavLink 
+                                to={item.to} 
+                                className={(nav) => cx('menuItem',{active: nav.isActive,child: true})}
+                                key={index}
+                            >
+                                <Button className={cx('item')}>{item.text}</Button>
+                            </NavLink>
+                        })
+                    }
+                </div>
             }
         </>
     );

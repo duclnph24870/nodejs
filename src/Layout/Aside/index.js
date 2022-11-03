@@ -1,7 +1,7 @@
 import styles from './Aside.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown,faHome } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown,faThLarge,faHome } from '@fortawesome/free-solid-svg-icons';
 import Menu from '../../components/Menu';
 
 const cx = classNames.bind(styles);
@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 function Aside() {
     const dataMenu = [
         { 
-            to: '/admin',iconLeft: <FontAwesomeIcon icon={faHome} />,iconRight: <FontAwesomeIcon icon={faAngleDown}/>,text: 'Trang chủ',active: false,
+            to: '/admin',iconLeft: <FontAwesomeIcon icon={faThLarge} />,iconRight: <FontAwesomeIcon icon={faAngleDown}/>,text: 'Trang chủ',active: false,
             children: [
                 {to: '/1',text: 'Children 0'},
                 {to: '/2',text: 'Children 1'},
