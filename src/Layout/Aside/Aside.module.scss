@@ -1,0 +1,22 @@
+.wrapper {
+    width: var(--aside-width);
+    background-color: #292e5a;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 0;
+    background-color: #252851 ;
+
+    img {
+        width: 137px;
+        height: 51px;
+        object-fit: cover;
+    }
+}

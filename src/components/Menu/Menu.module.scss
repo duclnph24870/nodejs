@@ -1,0 +1,41 @@
+.menuItem {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+        justify-content: flex-start !important;
+        font-weight: 400;
+        padding: 15px 0 15px 25px;
+        color: #b8c7ce;
+        width: 100%;
+        font-weight: 500;
+        border-left: 3px solid transparent;
+        border-radius: 0;
+
+        &:hover {
+            color: var(--white);
+        }
+
+        span {
+            font-size: 1.6rem !important;
+            margin-right: 20px !important;
+        }
+
+        span:nth-child(2) {
+            margin-left: auto;
+        }
+    }
+}
+
+.menuItem.active {
+
+    .item {
+        color: var(--white);
+        border-left: 3px solid #fff;
+    }
+}
+
+.child {
+    padding-left: 38px;
+    background-color: #252851;
+}
